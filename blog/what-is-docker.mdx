@@ -1,0 +1,17 @@
+Sanal makinelere alternatif arayanlar, Docker konusunda bilgi sahibi olabilirler. Bu yazıda Docker'ı tanıtıp avantajlarından bahsedeceğim.
+
+Docker, konteynır teknolojisini kullanarak uygulama geliştirmeyi, konuşlandırmayı ve çalıştırmayı kolaylaştıran açık kaynak kodlu bir platformdur. Günümüzde Google, IBM ve Microsoft gibi şirketlerin de kullanımıyla daha popüler bir hale gelmiştir. Docker'ın, sanal makinalara kıyasla daha esnek bir yapıya sahip olması ve tamamen ücretsiz olması tercih edilmesinde büyük çapta rol oynamaktadır.
+
+Konteynır'ı kısaca açıklayacak olursak, Docker Engine tarafından çalıştırılan ve birbirlerinden izole edilmiş işlemlerin her birine verilen isimdir. Geliştiriciler, geliştirme ortamlarını bu konteynırlar içerisine gerekli konfigürasyonları ile birlikte paketleyerek istedikleri ortama aktarabilirler. Deniz taşımacılığından esinlenilen bu yapı hem geliştiriciler açısından hem de sistem yöneticileri açısından bir çok sorunu ortadan kaldırmaktadır.
+
+Docker ve Sanal Makinaler Arasındaki Farklar Nelerdir?
+Docker, uygulamaları tek bir işletim sistemi üzerinde konteynır yapılarını kullanarak izolasyonunu sağlar. Sanal makine teknolojisinde ise bu yapı, Hypervisor aracılığıyla üzerinde bulunan sistemleri işletim sistemi seviyesinde ayırmasıyla elde edilir. Bu mimari yapı farkından dolayı, Docker sanal makinalara kıyasla daha dinamik bir yapıya sahiptir diyebiliriz.
+docker ve sanal makine karşılaştırması
+Docker'ın, kaynak yönetimi konusunda da sanal makinalardan bir adım önde olduğunu söyleyebiliriz. Tamamen sanallaştırılmış bir sistem, sadece kendisine ayırılan kaynağı kullanabilir ve minimal bir seviyede kaynak paylaşımı yapabilir. Buna kıyasla Docker, sistemde çalışan konteynırlar arasında kaynak kullanımını akıllı bir şekilde yapabilir. Örneğin, Docker üzerinde iki tane konteynır olduğunu varsayalım, bu konteynırlardan birisi CPU kullanmıyorken, diğer konteynır tüm CPU gücünden yararlanabilir. Sonuç olarak optimize edilmiş bir konteynır sistemi, sanal makinalara oranla çok daha fazla uygulama ayakta tutabilir diyebiliriz.
+
+Yazılım geliştirme sürecinde en büyük sorunlardan birisi de yazılımın sunucu ortamına taşınması olmuştur. Docker bu konuda da oldukça etkili diyebiliriz. Ağ, depolama ve işletim sistemi gibi detayları uygulamadan soyutlaştırarak, uygulamayı tüm bu detaylardan özgür bırakmayı amaçlar. Bu sayede yarattığınız bir konteynırı başka bir ortama taşıdığınızda çalışacağı garantisini verir.
+
+Docker Güvenli mi?
+Konteynırların tek bir işletim sisteminde çalışması, akıllara güvenlik sorununu getirmektedir. Docker bu konuya yazılımsal çözümler getirmiştir. Konteynır içerisinde çalışan uygulamalar başka bir konteynır içersindeki uygulamayı aksi belirtilmedikçe göremez ve etkileyemezler.
+
+Bunların yanı sıra aynı makinada bulunan konteynırların ortak kernel kullanımı geliştiricileri kaygılandıran önemli bir konudur. Docker bu konuda sanal makinaların verdiği güveni yakın gelecekte veremeyecek gibi gözükse de bu teknoloji yakın gelecekte daha da olgunlaşacak ve bununla birlikte daha stabil ve güvenilir bir hale gelecektir.

@@ -1,0 +1,48 @@
+İster bir sunucunun performansını optimizasyonu amacıyla olsun ister NAS (Network Attached Storage – Ağa Bağlı Veri Depolama) kutusu üzerinde total bir veri kaybını engellemek için olsun, sizin RAID’e ihtiyacınız var. Peki, hangi RAID tipi sizin için doğru seçenek? İşte yeni depolama alanı kullanıcıları için bir rehber.  
+
+Özellikle NAS cihazı veya sunucusu satın almak için araştırma yaptıysanız, şüphesiz RAID (Redundant Array of Independent Disks) terimine denk gelmişsinizdir. Genel olarak bir RAID sistemi, NAS ve sunucularda performansı geliştirmek için iki veya daha çok hard disk kullanır veya hata toleransı seviyesi sağlamaya çalışır. Hata toleransı basit bir şekilde, sabit diski arızalanan bir makinenin sorunsuz çalışmaya devam edeceğinden emin olmak için güvenli bir yapı kurmak anlamına gelir. Hata toleransı operasyon kesintilerini azaltır ve ayrıca veri kaybı ihtimalini düşürür.
+
+Hata toleransı RAID seviyelerine göre konfigüre edilir. Depolama cihazındaki disk sayısı, tipi, kurtarmanın veri ihtiyaçları için önemi ve yüksek performansın önemine bağlı olarak RAID seviyesine karar verilir. Bir işletme bir ev kullanıcısına nazaran genel olarak donanım arızasında veri bütünlüğünü korumaya daha çok önem verir.
+
+RAID’e Genel Bakış: RAID Nedir?
+RAID, disk hata toleransının ve optimize edilmiş performansın zorunluluk olduğu işletme ve kurumlarda kullanılır. İşletme veri merkezlerindeki sunucu ve NASlar genelde RAID kontrolörü olarak adlandırılan için bir donanım parçasına sahiptir. Bu sistemler RAID konfigürasyonuna bağlı olarak birkaç SSD veya SATA disk sürücülerine sahiptir. Tüketicilerin artan depolama taleplerinden dolayı ev NAS cihazları da RAID’i destekler.
+
+Yazılım RAID ise özel bir RAID kontrolörüne ihtiyaç duymadan RAID kurabileceğiniz anlamına gelir. RAID kapasitesi işletim sisteminde yazılımsal olarak kendiliğinden vardır. Tek bir diski iki bölme ile kurabilirsiniz, bir tanesi ön yükleme yapmak için ve diğeri de veri depolaması için kullanılabilir.
+Bu tip RAID OS X sunucusu, Linux ve Windows sunucuları dahil olmak üzere işletim sistemlerinde mevcuttur. Yazılım RAID ayrıca servis sağlayıcılar tarafından güçlü ana bilgisayar sanal RAID çeviricilerini temin etmek için satılan sanal RAID çözümlerini de kapsar. Bu işletme ağları için daha giriş seviyesi bir çözümdür.
+
+Benim için doğru olan RAID hangisi? 
+Daha önce belirttiğimiz gibi, birçok RAID seviyesi var ve hangisini seçeceğiniz RAID’i performans veya hata toleransı için ya da her ikisi için kullanıp kullanmadığınıza bağlıdır. Ayrıca donanıma veya yazılım RAID’ine sahip olup olmadığınız da önemlidir. Ayrıca donanım RAID kullandığınızda kontrolörün tipi de önemlidir. Farklı kontrolörler farklı RAID seviyelerini destekler ve sırayla kullanabileceğiniz disk çeşitlerini belirler: SAS, SATA veya SSD. 
+
+Popüler RAID Seviyeleri
+• RAID 0 sunucunun performansını geliştirmek için kullanılır. ‘’Disk bölüştürme’’ olarak da bilinir. RAID 0 kullanımında veri birçok diskin üzerine yazılır. Bu da bilgisayarın bir yerine birden fazla disk ile çalıştığı ve performansının arttığı anlamına gelir. Çünkü birden fazla sürücü veriyi okur, işler ve disk girdi / çıktısını geliştirir. En azından iki diske ihtiyaç duyar. Hem yazılım hem de donanım RAID, birçok kontrolör gibi RAID 0’ı destekler. Olumsuz tarafı ise hata toleransının olmamasıdır. Eğer disklerden biri bile bozulursa bütün sıralama bozulur ve büyük ihtimal veri kaybı olur veya bozulma artar. 
+
+• RAID 1 hata toleransı konfigürasyonu olan disk ikizleme olarak bilinir. RAID 1 ile veri sorunsuz bir şekilde ve devamlı olarak bir diskten diğerine kopyalanır ve böylece replika ya da ikiz yapı sağlanmış olur. Eğer bir tane disk bozulursa diğeri çalışmaya devam edebilir. Bu hata toleransını kullanmanın en kolay yoludur ve aynı zamanda düşük maliyetlidir. 
+
+RAID 1’in olumsuz yönü ise performansta düşüşe sebep olmasıdır. RAID 1 yazılım veya donanım aracılığıyla kullanılabilir. RAID 1 donanım uygulaması için en azından iki disk gereklidir. Yazılım RAID 1 ile iki fiziksel disk yerine veri tek bir disk üzerinde disk bölümünde kopyalanabilir. Hatırlanması gereken bir başka nokta da RAID 1’in disk kapasitesini ikiye böldüğüdür. Eğer iki 1 TB’lık sürücüye sahip bir sunucu RAID 1 ile konfigüre edilmişse, toplam depolama kapasitesi 1 TB olacaktır, 2 TB değil.  
+
+• RAID 5 işletme sunucuları ve işletme NAS cihazları için en yaygın olan RAID konfigürasyonudur. Bu RAID seviyesi RAID 1’den yani ikizlemeden daha iyi bir performans sağlar. RAID 5 ile veri, üç veya daha fazla diske bölüştürülür. Eğer bir disk hata verirse veya arıza vermeye başlarsa veri bu dağıtılmış veri ve eşlik bloğundan otomatik ve sorunsuz bir şekilde tekrar yaratılır. Temel olarak sistem, siz bozulan sürücüyü değiştirene kadar, bir diskle bile olsa çalışmaya devam eder.
+
+RAID 5’in başka bir yararı da birçok NAS ve sunucu sürücüsünün çalıştırılırken değiştirilmesine izin vermesidir. Yani dizideki bir sürücü bozulduğunda, sunucu veya NAS’a erişen kullanıcıların erişimini bozmadan; sunucu veya NAS’ı kapatmadan yeni bir sürücü ile bozulanı değiştirebilirsiniz. Bu hata toleransı için harika bir çözümdür. Çünkü sürücü arızalandığında veri bozulan diskler değiştirilirken yeni disklerde yenilen yaratılır.
+
+RAID 5’in kötü tarafı ise sunucuların birçok yazma operasyonu gerçekleştirdiği performans darbesidir. Örneğin, birçok çalışanın çalışma gününde erişim sağladığı veri tabanının olduğu bir sunucudaki RAID 5’te fark edilebilen bir gecikme olabilir.
+
+• RAID 6 işletmelerde oldukça yaygın olarak kullanılır. RAID 5 ile neredeyse aynıdır ama RAID 6 daha dayanıklı bir çözümdür. Çünkü RAID 5’e göre birden çok eşlik bloğu kullanır. İki diskiniz ölür ama sizin sisteminiz hala çalışmaya devam eder.  
+
+• RAID 10 RAID 1 ve 0’ın bir kombinasyonudur. Genel olarak RAID 1+0 olarak ifade edilir. RAID 1’in ikizlemesi ile RAID 0’ın bölümlemesini kombine eder. En iyi performansı veren RAID seviyesidir ama aynı zamanda diğerlerinden daha pahalıdır. Diğer RAID seviyelerinin iki katı diske ihtiyaç duyar, en azından dört tanesine. Bu RAID seviyesi yüksekçe fayda sağlanan veri tabanı sunucuları veya birçok yazma operasyonu gerçekleştiren donanımlar için idealdir. RAID 10, bir donanım veya yazılım olarak uygulanabilir ama yazılım olarak kullanılmaya çalışıldığında performans avantajları kaybolmaktadır.   
+
+Diğer RAID Seviyeleri
+Diğer RAID seviyeleri de bulunmaktadır. Örnek:   2, 3, 4, 7, 0+1, vs. Bunlar yukarıda bahsettiğimiz asıl RAID konfigürasyonlarının değişkenleridir ve belirli işlemler için kullanılır. İşte bu seviyelerin kısa tanımları:  
+
+• RAID 2, RAID 5’e benzer ama ikizleme ile disk bölüştürme yerine, bölüştürme bit seviyesinde gerçekleşir. RAID 2 nadiren kullanılır çünkü uygulamak için maliyeti genel olarak yüksektir ve bazı disk girdi ve çıktı operasyonlarında zayıf performans gösterir. 
+
+• RAID 3 de RAID 5’e benzer ama bu çözüm özelleştirilmiş bir eşlik sürücüsü gerektirir. RAID 3 fazlaca uzmanlaşmış veri tabanı veya işleme çevreleri haricinde nadiren kullanılır.
+
+• RAID 4 disk bölüştürmesinin RAID 3’te olduğu gibi bit seviyesi yerine byte seviyesinde olduğu konfigürasyondur.
+
+• RAID 7 artık piyasada olmayan bir kurum tarafından sahiplenmiş tescilli bir RAID seviyesidir.
+
+• RAID 0+1 genel olarak RAID 10 ile karıştırılır ama ikisi aynı değildir. RAID 0+1, RAID 0 düzeni olan bölümlerin ikiz dizilişidir. Yüksek performans gerektiren fakat yüksek ölçeklenirlik gerektirmeyen belirli altyapılar için kullanılır. 
+
+Birçok küçük ve orta büyüklükteki işletme amaçları için RAID 0, RAID 1, RAID 5 ve bazı durumlarda da RAID 10’un performansı yeterlidir. Birçok ev kullanıcısı için RAID 5 aşırı güç kullanabilir ama RAID 1 de disk ikizlemesi ile yeterli hata toleransını sağlar.
+
+Son olarak belirtmeliyiz ki; RAID tek başına bir yedekleme çözümü değildir ve bir yedekleme stratejisinin yerini alamaz. RAID, NAS ve sunucu performansını optimize etmek ve donanım hatalarından hızlı bir şekilde kurtulmak için mükemmel faydalar sağlar. Fakat tam bir felaket kurtarma çözümünün yalnızca bir parçası olabilir.
